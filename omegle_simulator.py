@@ -1,6 +1,7 @@
 import random
 
-class omegle():
+
+class Omegle():
     def idk(self):
         while True:
             try:
@@ -11,20 +12,23 @@ class omegle():
                     if question2 in ["m", "M", "male", "Male"]:
                         break
                     if question2 in ["f", "F", "female", "Female"]:
+                        global answer1
                         answer1 = str(input("pic?"))
-                        if answer1 in ["n", "N", "no", "No", "NO"]:
+                    if answer1 in ["n", "N", "no", "No", "NO"]:
                             break
                 if answer1 in ["y", "Y", "Yes", "YES"]:
-                    name1 = ["Jo", "Jam", "Will", "Dav", "Matt", "Rus"]
-                    name2 = ["chez", "phy", "ward"]
+                    name1 = ["Jo", "Jam", "Will", "Dav", "Matt", "Rus", "Don", "Stev", "Kev", "Jac"]
+                    name2 = ["chez", "phy", "ward", "lee", "lins", "ox", "ood", "gan", "pez", "ong"]
                     randname1 = random.choice(name1)
                     randname2 = random.choice(name2)
                     name = (randname1 + randname2)
-                    print("snap = @" +name)
+                    print("snap = @" + name)
                     break
                 else:
                     break
             finally:
                 print("bye")
-bot = omegle
-bot.idk(1)
+
+
+bot = Omegle()
+bot.idk()
